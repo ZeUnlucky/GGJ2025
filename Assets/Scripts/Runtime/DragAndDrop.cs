@@ -8,6 +8,7 @@ namespace Runtime
     public class DragAndDrop : MonoBehaviour
     {
         [SerializeField] private CraftingSystem _craftingSystem;
+        [SerializeField] private GoalItem _goalItem;
 
         private Vector3 _offset;
         private Camera _mainCamera;
@@ -57,6 +58,12 @@ namespace Runtime
                 if (!_craftingSystem.TryToCombine(thisTag, otherTag, out GameObject output)) continue;
 
                 GameObject.Instantiate(output, transform.position, quaternion.identity);
+
+                if (_goalItem)
+                {
+                    _goalItem.Resolve();
+                }
+
                 Destroy(hit.gameObject);
                 Destroy(gameObject);
                 // Exit after first successful combination
