@@ -1,43 +1,54 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class GameManager : MonoBehaviour
+namespace Runtime
 {
-    [SerializeField] UIManager uiManager;
-    [SerializeField] SettingsHandler settings;
-    [SerializeField] AudioMixer audioMixer;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class GameManager : MonoBehaviour
     {
-        Time.timeScale = 1.0f;
-        uiManager.OnPause += HandlePause;
-        settings.OnMasterVolumeChange += UpdateMaster;
-        settings.OnSFXVolumeChange += UpdateSFX;
-        settings.OnMusicVolumeChange += UpdateMusic;
-    }
+        [SerializeField] SettingsHandler settings;
+        [SerializeField] AudioMixer audioMixer;
 
-    private void HandlePause(bool pause)
-    {
-        Time.timeScale = pause ? 0 : 1;
-    }
+        [SerializeField] private GoalManager _goalManager;
 
-    private void UpdateMaster(float volume)
-    {
-        audioMixer.SetFloat("Master", CalculateVolumeBySlider(volume));
-    }
+        [SerializeField] private Timer _timer;
 
-    private void UpdateSFX(float volume)
-    {
-        audioMixer.SetFloat("SFX", CalculateVolumeBySlider(volume));
-    }
+        [SerializeField] private TextMeshProUGUI _announcementTextField;
 
-    private void UpdateMusic(float volume)
-    {
-        audioMixer.SetFloat("Music", CalculateVolumeBySlider(volume));
-    }
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        void Start()
+        {
+            settings.OnMasterVolumeChange += UpdateMaster;
+            settings.OnSFXVolumeChange += UpdateSFX;
+            settings.OnMusicVolumeChange += UpdateMusic;
 
-    private float CalculateVolumeBySlider(float volume)
-    {
-        return Mathf.Log10(volume) * 20;
+            _timer.OnTimerEnded += () =>
+            {
+                //Game over
+                var score = _goalManager.Score;
+                _announcementTextField.text = $"Your Mom is home! You managed to hide {score} items.";
+                //TODO: Stop the game and restart
+            };
+        }
+
+        private void UpdateMaster(float volume)
+        {
+            audioMixer.SetFloat("Master", CalculateVolumeBySlider(volume));
+        }
+
+        private void UpdateSFX(float volume)
+        {
+            audioMixer.SetFloat("SFX", CalculateVolumeBySlider(volume));
+        }
+
+        private void UpdateMusic(float volume)
+        {
+            audioMixer.SetFloat("Music", CalculateVolumeBySlider(volume));
+        }
+
+        private float CalculateVolumeBySlider(float volume)
+        {
+            return Mathf.Log10(volume) * 20;
+        }
     }
 }
