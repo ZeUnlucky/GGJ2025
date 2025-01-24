@@ -6,6 +6,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] GameSettings gameSettings;
     private float gameSeconds;
+    private bool _isRunning;
 
     public float GameSeconds => gameSeconds;
 
@@ -15,14 +16,17 @@ public class Timer : MonoBehaviour
     void Start()
     {
         gameSeconds = gameSettings.GameSeconds;
+        _isRunning = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!_isRunning) return;    
         gameSeconds -= Time.deltaTime;
         if (gameSeconds <= 0)
         {
+            _isRunning = false;
             OnTimerEnded.Invoke();
         }
     }

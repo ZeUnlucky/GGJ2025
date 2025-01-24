@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dd0624f334442e7a4ce71a79445590b, type: 3}
-  m_Name: Fixed Sofa
+  m_Name: Cookie Jar
   m_EditorClassIdentifier: 
-  _inputTagA: Knitting Kit
-  _inputTagB: Torn Sofa
-  _output: {fileID: 4030181469806206111, guid: f82b33bf6245682449f01bc8f36ee0f6, type: 3}
+  _inputTagA: Cookies
+  _inputTagB: Cookie Jar
+  _output: {fileID: 4030181469806206111, guid: 6918fd7868d225642a4533d20cd8ea47, type: 3}

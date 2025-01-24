@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dd0624f334442e7a4ce71a79445590b, type: 3}
-  m_Name: Fixed Sofa
+  m_Name: Photo Placement
   m_EditorClassIdentifier: 
-  _inputTagA: Knitting Kit
-  _inputTagB: Torn Sofa
-  _output: {fileID: 4030181469806206111, guid: f82b33bf6245682449f01bc8f36ee0f6, type: 3}
+  _inputTagA: Picture
+  _inputTagB: Picture Placement
+  _output: {fileID: 4030181469806206111, guid: 985cdf8e0201fa441a6cb38128f592ea, type: 3}

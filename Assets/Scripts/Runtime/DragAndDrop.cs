@@ -45,7 +45,7 @@ namespace Runtime
             _isDragging = false;
 
             // Use OverlapCircle instead to find other objects
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 5f);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1f);
 
             foreach (Collider2D hit in hits)
             {

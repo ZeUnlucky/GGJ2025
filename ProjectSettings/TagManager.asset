@@ -23,6 +23,8 @@ TagManager:
   - Window
   - Trash
   - Lamp Head
+  - Cookie Jar
+  - Curtains
   layers:
   - Default
   - TransparentFX
