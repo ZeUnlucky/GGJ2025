@@ -1306,9 +1306,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69386b6995186974e80af42e0d2702b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiManager: {fileID: 1398655631}
   settings: {fileID: 593629263}
   audioMixer: {fileID: 24100000, guid: 29590d63ff1f58349a04e024db40f1ed, type: 2}
+  uiManager: {fileID: 1398655631}
   _goalManager: {fileID: 1110668159}
   _timer: {fileID: 593629260}
   _announcementTextField: {fileID: 834860724}
@@ -2175,6 +2175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _craftingSystem: {fileID: 1749764714}
+  _goalItem: {fileID: 0}
 --- !u!50 &1586020795
 Rigidbody2D:
   serializedVersion: 5
