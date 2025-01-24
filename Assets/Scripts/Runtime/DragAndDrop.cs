@@ -1,43 +1,74 @@
+using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Runtime
 {
+    [RequireComponent(typeof(Collider2D))]
     public class DragAndDrop : MonoBehaviour
     {
-        private Vector3 offset;
-        private Camera mainCamera;
-        private bool isDragging = false;
+        [SerializeField] private CraftingSystem _craftingSystem;
+
+        private Vector3 _offset;
+        private Camera _mainCamera;
+        private bool _isDragging = false;
+
+        private void Awake()
+        {
+            _craftingSystem ??= FindAnyObjectByType<CraftingSystem>();
+        }
 
         void Start()
         {
-            mainCamera = Camera.main;
+            _mainCamera = Camera.main;
         }
 
         void OnMouseDown()
         {
-            offset = transform.position - GetMouseWorldPosition();
-            isDragging = true;
+            _offset = transform.position - GetMouseWorldPosition();
+            _isDragging = true;
         }
 
         void OnMouseDrag()
         {
-            if (isDragging)
+            if (_isDragging)
             {
                 // Update the sprite's position to follow the mouse
-                transform.position = GetMouseWorldPosition() + offset;
+                transform.position = GetMouseWorldPosition() + _offset;
             }
         }
 
+
         void OnMouseUp()
         {
-            isDragging = false;
+            _isDragging = false;
+
+            // Use OverlapCircle instead to find other objects
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 5f);
+
+            foreach (Collider2D hit in hits)
+            {
+                // Skip self
+                if (hit.gameObject == gameObject) continue;
+
+                var thisTag = tag;
+                var otherTag = hit.gameObject.tag;
+
+                if (!_craftingSystem.TryToCombine(thisTag, otherTag, out GameObject output)) continue;
+
+                GameObject.Instantiate(output, transform.position, quaternion.identity);
+                Destroy(hit.gameObject);
+                Destroy(gameObject);
+                // Exit after first successful combination
+                break;
+            }
         }
 
         private Vector3 GetMouseWorldPosition()
         {
             Vector3 mouseScreenPosition = Input.mousePosition;
-            mouseScreenPosition.z = mainCamera.WorldToScreenPoint(transform.position).z;
-            return mainCamera.ScreenToWorldPoint(mouseScreenPosition);
+            mouseScreenPosition.z = _mainCamera.WorldToScreenPoint(transform.position).z;
+            return _mainCamera.ScreenToWorldPoint(mouseScreenPosition);
         }
     }
 }
