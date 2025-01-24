@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -9,8 +10,10 @@ namespace Runtime
         [SerializeField] private List<GoalItem> _goalItems;
         [SerializeField] private TextMeshProUGUI _textFieldPrefab;
 
+        public event Action onCompleted;
         public List<GoalItem> GoalItems => _goalItems;
         public int Score { get; private set; } = 0;
+
 
         public void Add(GoalItem goalItem)
         {
@@ -24,6 +27,11 @@ namespace Runtime
                 Score++;
                 //instance.text = $"<s>{instance.text}</s>";
                 Destroy(instance);
+
+                if (_goalItems.Count == 0)
+                {
+                    onCompleted?.Invoke();
+                }
             };
         }
     }
