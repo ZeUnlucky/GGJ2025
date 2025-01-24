@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8391d5513fe85ae43a70e61b2d92fad1
+guid: b04531a836135e64ebaf8f93ef7eccf5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1603068352324891198
-    second: round-pause-button_0
+      213: 1223701382213545271
+    second: room colored_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: round-pause-button_0
+      name: room colored_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 1440
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e32fefa4c2e3f3610800000000000000
-      internalID: 1603068352324891198
+      spriteID: 73d2ef57ce57bf010800000000000000
+      internalID: 1223701382213545271
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      round-pause-button_0: 1603068352324891198
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

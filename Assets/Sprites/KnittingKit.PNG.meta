@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 8391d5513fe85ae43a70e61b2d92fad1
+guid: 5346a0a538249284692a9c6e6e6a4724
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1603068352324891198
-    second: round-pause-button_0
+      213: 9089799661985807895
+    second: KnittingKit_0
+  - first:
+      213: 4683641312055658795
+    second: KnittingKit_1
+  - first:
+      213: -6232573809967114278
+    second: KnittingKit_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: round-pause-button_0
+      name: KnittingKit_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 954
+        y: 1536
+        width: 15
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e32fefa4c2e3f3610800000000000000
-      internalID: 1603068352324891198
+      spriteID: 71e312cf1a4752e70800000000000000
+      internalID: 9089799661985807895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnittingKit_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 235
+        width: 1422
+        height: 1293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b290c6455f2aff040800000000000000
+      internalID: 4683641312055658795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnittingKit_2
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 235
+        width: 33
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7d18434237189a0800000000000000
+      internalID: -6232573809967114278
       vertices: []
       indices: 
       edges: []
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      round-pause-button_0: 1603068352324891198
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

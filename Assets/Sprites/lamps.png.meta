@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 8391d5513fe85ae43a70e61b2d92fad1
+guid: c90d30fb27e1e124d889f891801b661d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1603068352324891198
-    second: round-pause-button_0
+      213: 7709045187503265501
+    second: lamps_0
+  - first:
+      213: -7133718690516275112
+    second: lamps_1
+  - first:
+      213: -5202589402833740621
+    second: lamps_2
+  - first:
+      213: -2410901812387134227
+    second: lamps_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: round-pause-button_0
+      name: lamps_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 306
+        y: 85
+        width: 179
+        height: 408
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e32fefa4c2e3f3610800000000000000
-      internalID: 1603068352324891198
+      spriteID: dd61196f0c70cfa60800000000000000
+      internalID: 7709045187503265501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lamps_1
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 87
+        width: 179
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8507634a5a0fffc90800000000000000
+      internalID: -7133718690516275112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lamps_2
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 424
+        width: 149
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bc12eba080bcc7b0800000000000000
+      internalID: -5202589402833740621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lamps_3
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 85
+        width: 234
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4c15c3391ca8ed0800000000000000
+      internalID: -2410901812387134227
       vertices: []
       indices: 
       edges: []
@@ -134,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      round-pause-button_0: 1603068352324891198
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
