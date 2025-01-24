@@ -1,8 +1,13 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    private bool isPaused = false;
+    public event Action<bool> OnPause;
+    [SerializeField] GameObject SecondMenu;
+
     public void LoadGameScene()
     {
         SceneManager.LoadScene("Game");
@@ -12,8 +17,11 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
-    public void PrintPress()
+
+    public void TogglePause()
     {
-        Debug.LogWarning("HERE");
+        isPaused = !isPaused;
+        SecondMenu.SetActive(isPaused);
+        OnPause.Invoke(isPaused);
     }
 }
