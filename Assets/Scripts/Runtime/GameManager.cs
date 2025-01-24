@@ -15,6 +15,8 @@ namespace Runtime
 
         [SerializeField] private TextMeshProUGUI _announcementTextField;
 
+        private bool _isGameOver = false;
+
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -22,13 +24,17 @@ namespace Runtime
             settings.OnSFXVolumeChange += UpdateSFX;
             settings.OnMusicVolumeChange += UpdateMusic;
 
-            _timer.OnTimerEnded += () =>
-            {
-                //Game over
-                var score = _goalManager.Score;
-                _announcementTextField.text = $"Your Mom is home! You managed to hide {score} items.";
-                //TODO: Stop the game and restart
-            };
+            _timer.OnTimerEnded += GameOver;
+            _goalManager.onCompleted += GameOver;
+        }
+
+        private void GameOver()
+        {
+            if (_isGameOver) return;
+            //Game over
+            var score = _goalManager.Score;
+            _announcementTextField.text = $"Your Mom is home! You managed to hide {score} items.";
+            //TODO: Stop the game and restart
         }
 
         private void UpdateMaster(float volume)
