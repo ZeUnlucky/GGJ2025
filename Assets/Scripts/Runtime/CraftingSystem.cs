@@ -10,8 +10,8 @@ namespace Runtime
 
         public bool TryToCombine(string inputA, string inputB, out GameObject output)
         {
-            output = _recipes.FirstOrDefault((recipe => recipe.InputA == inputA && recipe.InputB == inputB))?.Output;
-
+            Debug.Log($"Input A: {inputA} and inputB: {inputB}");
+            output = _recipes.FirstOrDefault((recipe => recipe.InputA == inputA && recipe.InputB == inputB))?.Output;  
             return output != null;
         }
     }

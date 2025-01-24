@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 715353f66a3edca40956bf195f529ec6
+guid: 5283d9f8591012d47afa5e0f3ea9d774
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6961417201864721990
-    second: TornCouch_0
+      213: -2961843013543316336
+    second: couch_side_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TornCouch_0
+      name: couch_side_0
       rect:
         serializedVersion: 2
-        x: 177
-        y: 714
-        width: 1683
-        height: 735
+        x: 408
+        y: 623
+        width: 1085
+        height: 1057
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 646c07adf0ceb9060800000000000000
-      internalID: 6961417201864721990
+      spriteID: 0943741c87b65e6d0800000000000000
+      internalID: -2961843013543316336
       vertices: []
       indices: 
       edges: []

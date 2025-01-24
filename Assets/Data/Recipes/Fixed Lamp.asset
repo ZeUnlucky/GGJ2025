@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dd0624f334442e7a4ce71a79445590b, type: 3}
-  m_Name: Lamp Person
+  m_Name: Fixed Lamp
   m_EditorClassIdentifier: 
-  _inputTagA: Person
+  _inputTagA: Lamp Head
   _inputTagB: Broken Lamp
   _output: {fileID: 4030181469806206111, guid: 8c44f5b766bac8448a3d1c08077561c2, type: 3}

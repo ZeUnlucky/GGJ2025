@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d9821082b5fe1dc40993f35c66e81301
+guid: c2dc6d0ea48a454428c89bc4d3caa0c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2542345876478591732
-    second: lamp_head_0
+      213: -4133499480565145441
+    second: couch_back_0
+  - first:
+      213: 5492062692267254610
+    second: couch_back_1
+  - first:
+      213: -4602735359286517112
+    second: couch_back_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lamp_head_0
+      name: couch_back_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 10
-        width: 148
-        height: 125
+        x: 174
+        y: 1203
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0d705035e5c7bcd0800000000000000
-      internalID: -2542345876478591732
+      spriteID: f9027a56f1cd2a6c0800000000000000
+      internalID: -4133499480565145441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: couch_back_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 714
+        width: 1683
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 253e3c0abe9b73c40800000000000000
+      internalID: 5492062692267254610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: couch_back_2
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 287
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882e89ab39ccf10c0800000000000000
+      internalID: -4602735359286517112
       vertices: []
       indices: 
       edges: []

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: a2a610a617cc6194d9e1e584925defd6
+guid: 96cc4babe3af25e4aabb86ce7ab5c7d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7530208127185674671
-    second: lamp_broken_0
+      213: -2730024446895596234
+    second: pizza_box_0
+  - first:
+      213: -7364452144934479355
+    second: pizza_box_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lamp_broken_0
+      name: pizza_box_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 52
-        width: 234
-        height: 251
+        x: 200
+        y: 256
+        width: 649
+        height: 584
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa169a9156ca08860800000000000000
-      internalID: 7530208127185674671
+      spriteID: 63dd7a6da310d1ad0800000000000000
+      internalID: -2730024446895596234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_box_1
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 405
+        width: 479
+        height: 576
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50a11dfeac53cc990800000000000000
+      internalID: -7364452144934479355
       vertices: []
       indices: 
       edges: []
