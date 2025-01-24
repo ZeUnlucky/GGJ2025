@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
 
 
     public event Action OnTimerEnded;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,10 +22,9 @@ public class Timer : MonoBehaviour
     void Update()
     {
         gameSeconds -= Time.deltaTime;
-        Debug.Log(gameSeconds.ToString("0:00"));
         if (gameSeconds <= 0)
         {
-            OnTimerEnded.Invoke();
+            OnTimerEnded?.Invoke();
         }
     }
 }
