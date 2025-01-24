@@ -782,6 +782,7 @@ GameObject:
   - component: {fileID: 1287393416}
   - component: {fileID: 1287393417}
   - component: {fileID: 1287393418}
+  - component: {fileID: 1287393419}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -831,6 +832,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimerTextField: {fileID: 684400545}
   timer: {fileID: 1287393417}
+--- !u!114 &1287393419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287393415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69386b6995186974e80af42e0d2702b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settings: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 29590d63ff1f58349a04e024db40f1ed, type: 2}
 --- !u!1 &1749764713
 GameObject:
   m_ObjectHideFlags: 0
