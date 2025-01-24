@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    private bool isPaused = false;
-    public event Action<bool> OnPause;
+    private bool isMenuEnabled = false;
+    public event Action<bool> OnMenuEnabled;
     [SerializeField] GameObject SecondMenu;
 
     public void LoadGameScene()
@@ -18,10 +18,15 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
-    public void TogglePause()
+    public void ToggleMenu()
     {
-        isPaused = !isPaused;
-        SecondMenu.SetActive(isPaused);
-        OnPause.Invoke(isPaused);
+        isMenuEnabled = !isMenuEnabled;
+        SecondMenu.SetActive(isMenuEnabled);
+        OnMenuEnabled?.Invoke(isMenuEnabled);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

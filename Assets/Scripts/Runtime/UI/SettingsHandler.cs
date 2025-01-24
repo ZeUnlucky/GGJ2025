@@ -22,20 +22,20 @@ public class SettingsHandler : MonoBehaviour
     {
         masterVolume = volume;
         PlayerPrefs.SetFloat("masterVolume", masterVolume);
-        OnMasterVolumeChange.Invoke(masterVolume);
+        OnMasterVolumeChange?.Invoke(masterVolume);
     }
 
     public void SetSFXVolume(float volume)
     {
         sfxVolume = volume;
         PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
-        OnSFXVolumeChange.Invoke(sfxVolume);
+        OnSFXVolumeChange?.Invoke(sfxVolume);
     }
 
     public void SetMusicVolume(float volume)
     {
         musicVolume = volume;
         PlayerPrefs.SetFloat("musicVolume", musicVolume);
-        OnMusicVolumeChange.Invoke(musicVolume);
+        OnMusicVolumeChange?.Invoke(musicVolume);
     }
 }

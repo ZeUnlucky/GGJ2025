@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
-        uiManager.OnPause += HandlePause;
+        uiManager.OnMenuEnabled += HandlePause;
         settings.OnMasterVolumeChange += UpdateMaster;
         settings.OnSFXVolumeChange += UpdateSFX;
         settings.OnMusicVolumeChange += UpdateMusic;
