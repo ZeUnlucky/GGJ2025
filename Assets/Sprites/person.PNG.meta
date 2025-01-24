@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b04531a836135e64ebaf8f93ef7eccf5
+guid: 1f3df2950242af248ae1e898c860f321
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1223701382213545271
-    second: room colored_0
+      213: 6861894420282137670
+    second: person_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: room colored_0
+      name: person_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1440
-        height: 1024
+        x: 394
+        y: 1399
+        width: 630
+        height: 251
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73d2ef57ce57bf010800000000000000
-      internalID: 1223701382213545271
+      spriteID: 64cd62f8e985a3f50800000000000000
+      internalID: 6861894420282137670
       vertices: []
       indices: 
       edges: []
