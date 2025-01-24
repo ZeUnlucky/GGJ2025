@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd0624f334442e7a4ce71a79445590b, type: 3}
+  m_Name: Curtain Fix
+  m_EditorClassIdentifier: 
+  _inputTagA: Curtains
+  _inputTagB: Window
+  _output: {fileID: 5911532939975026685, guid: 668170c2c9e993b4c8f97c19fd204baa, type: 3}

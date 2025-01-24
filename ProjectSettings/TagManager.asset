@@ -22,6 +22,12 @@ TagManager:
   - Torn Sofa
   - Window
   - Trash
+  - Lamp Head
+  - Cookie Jar
+  - Curtains
+  - FxTemporaire
+  - Picture
+  - Picture Placement
   layers:
   - Default
   - TransparentFX

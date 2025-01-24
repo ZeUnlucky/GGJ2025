@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd0624f334442e7a4ce71a79445590b, type: 3}
   m_Name: Fixed Sofa
   m_EditorClassIdentifier: 
-  _inputTagA: Torn Sofa
-  _inputTagB: Colorful Stripes
+  _inputTagA: Knitting Kit
+  _inputTagB: Torn Sofa
   _output: {fileID: 4030181469806206111, guid: f82b33bf6245682449f01bc8f36ee0f6, type: 3}

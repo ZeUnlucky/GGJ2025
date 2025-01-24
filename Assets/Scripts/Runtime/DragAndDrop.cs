@@ -9,6 +9,7 @@ namespace Runtime
     {
         [SerializeField] private CraftingSystem _craftingSystem;
         [SerializeField] private GoalItem _goalItem;
+        [SerializeField] private GameSettings _particleSystemSetting;
 
         private Vector3 _offset;
         private Camera _mainCamera;
@@ -45,7 +46,7 @@ namespace Runtime
             _isDragging = false;
 
             // Use OverlapCircle instead to find other objects
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 5f);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 1f);
 
             foreach (Collider2D hit in hits)
             {
@@ -57,8 +58,8 @@ namespace Runtime
 
                 if (!_craftingSystem.TryToCombine(thisTag, otherTag, out GameObject output)) continue;
 
-                GameObject.Instantiate(output, transform.position, quaternion.identity);
-
+                GameObject.Instantiate(output, hit.gameObject.transform.position, quaternion.identity);
+                GameObject.Instantiate(_particleSystemSetting.particleSystemObject, transform.position, quaternion.identity);
                 if (_goalItem)
                 {
                     _goalItem.Resolve();

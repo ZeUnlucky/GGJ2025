@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd0624f334442e7a4ce71a79445590b, type: 3}
   m_Name: Fixed Vase (Jam)
   m_EditorClassIdentifier: 
-  _inputTagA: Flower Vase
-  _inputTagB: Jam
+  _inputTagA: Jam
+  _inputTagB: Flower Vase
   _output: {fileID: 4030181469806206111, guid: 9d2852c4b9c8fdf4f9af15c24ac085d3, type: 3}
