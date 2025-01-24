@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Broken_vase_0: -6339961275483215077
+      Broken_vase_1: -7408455875011786483
+      Broken_vase_2: -964068856094409123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
