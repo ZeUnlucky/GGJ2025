@@ -8,6 +8,7 @@ namespace Runtime
     {
         [SerializeField] SettingsHandler settings;
         [SerializeField] AudioMixer audioMixer;
+        [SerializeField] UIManager uiManager;
 
         [SerializeField] private GoalManager _goalManager;
 
@@ -20,9 +21,11 @@ namespace Runtime
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
+            Time.timeScale = 1;
             settings.OnMasterVolumeChange += UpdateMaster;
             settings.OnSFXVolumeChange += UpdateSFX;
             settings.OnMusicVolumeChange += UpdateMusic;
+            uiManager.OnMenuEnabled += SetMenuStatus;
 
             _timer.OnTimerEnded += GameOver;
             _goalManager.onCompleted += GameOver;
@@ -50,6 +53,11 @@ namespace Runtime
         private void UpdateMusic(float volume)
         {
             audioMixer.SetFloat("Music", CalculateVolumeBySlider(volume));
+        }
+
+        private void SetMenuStatus(bool status)
+        {
+            Time.timeScale = status ? 0 : 1;
         }
 
         private float CalculateVolumeBySlider(float volume)
