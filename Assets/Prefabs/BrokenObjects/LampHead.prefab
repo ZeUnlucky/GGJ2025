@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5202589402833740621, guid: c90d30fb27e1e124d889f891801b661d, type: 3}
+  m_Sprite: {fileID: -5202589402833740621, guid: 245129c2756e45c42bce8631818d8867, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _craftingSystem: {fileID: 0}
   _goalItem: {fileID: 4377450174824328916}
+  _particleSystemSetting: {fileID: 11400000, guid: 36c89aacaf059654ea13684ab8f15d05, type: 2}
 --- !u!114 &4377450174824328916
 MonoBehaviour:
   m_ObjectHideFlags: 0

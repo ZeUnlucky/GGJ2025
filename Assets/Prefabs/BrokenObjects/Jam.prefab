@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _craftingSystem: {fileID: 0}
   _goalItem: {fileID: 305979019741599903}
+  _particleSystemSetting: {fileID: 11400000, guid: 36c89aacaf059654ea13684ab8f15d05, type: 2}
 --- !u!114 &305979019741599903
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9157105887711914197, guid: 2b642a90f8e2e4945b516a0b9f3479b9, type: 3}
       propertyPath: m_Name
-      value: CFXR Magic Poof Variant
+      value: _Poof
       objectReference: {fileID: 0}
     - target: {fileID: 9175254903356036783, guid: 2b642a90f8e2e4945b516a0b9f3479b9, type: 3}
       propertyPath: m_Materials.Array.size

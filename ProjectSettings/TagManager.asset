@@ -25,6 +25,9 @@ TagManager:
   - Lamp Head
   - Cookie Jar
   - Curtains
+  - FxTemporaire
+  - Picture
+  - Picture Placement
   layers:
   - Default
   - TransparentFX

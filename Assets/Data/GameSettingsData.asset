@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GameSettingsData
   m_EditorClassIdentifier: 
   GameSeconds: 60
+  particleSystemObject: {fileID: 1131655373461136278, guid: 6d411b147fa73e84ba1c14f1798cf1ad, type: 3}

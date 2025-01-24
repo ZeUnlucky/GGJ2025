@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1182513766734932090, guid: 871dde0fbdd8581499d0ef23f82ea8e0, type: 3}
+  m_Sprite: {fileID: -4748372806509876800, guid: edcaf76b0f56f06459282317bdf8d515, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,17 +152,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.2430166, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.68}
+    oldSize: {x: 1.76, y: 2.56}
     newSize: {x: 14.22, y: 12.93}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 2.68}
+  m_Size: {x: 1.5139668, y: 2.68}
   m_EdgeRadius: 0
 --- !u!114 &1033176504389467494
 MonoBehaviour:
@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _craftingSystem: {fileID: 0}
   _goalItem: {fileID: -5991008936758754419}
+  _particleSystemSetting: {fileID: 11400000, guid: 36c89aacaf059654ea13684ab8f15d05, type: 2}
 --- !u!114 &-5991008936758754419
 MonoBehaviour:
   m_ObjectHideFlags: 0

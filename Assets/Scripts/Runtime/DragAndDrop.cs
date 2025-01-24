@@ -9,6 +9,7 @@ namespace Runtime
     {
         [SerializeField] private CraftingSystem _craftingSystem;
         [SerializeField] private GoalItem _goalItem;
+        [SerializeField] private GameSettings _particleSystemSetting;
 
         private Vector3 _offset;
         private Camera _mainCamera;
@@ -57,8 +58,8 @@ namespace Runtime
 
                 if (!_craftingSystem.TryToCombine(thisTag, otherTag, out GameObject output)) continue;
 
-                GameObject.Instantiate(output, transform.position, quaternion.identity);
-
+                GameObject.Instantiate(output, hit.gameObject.transform.position, quaternion.identity);
+                GameObject.Instantiate(_particleSystemSetting.particleSystemObject, transform.position, quaternion.identity);
                 if (_goalItem)
                 {
                     _goalItem.Resolve();

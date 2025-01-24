@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd0624f334442e7a4ce71a79445590b, type: 3}
   m_Name: Full Trash
   m_EditorClassIdentifier: 
-  _inputTagA: Trash can
-  _inputTagB: Trash
+  _inputTagA: Trash
+  _inputTagB: Trash can
   _output: {fileID: 4030181469806206111, guid: b7bee1eb5a829ee4c9058516107ed6ad, type: 3}

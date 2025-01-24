@@ -5,5 +5,5 @@ using UnityEngine;
 public class GameSettings : ScriptableObject
 {
     public float GameSeconds = 60.0f;
-
+    [SerializeField] public GameObject particleSystemObject;
 }
