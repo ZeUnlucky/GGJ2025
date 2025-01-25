@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Curtain Fix
   m_EditorClassIdentifier: 
   _inputTagA: Curtains
-  _inputTagB: Window
-  _output: {fileID: 5911532939975026685, guid: 668170c2c9e993b4c8f97c19fd204baa, type: 3}
+  _inputTagB: Curtain Shadow
+  _output: {fileID: 1836838516430976618, guid: 03a0c2944914e484eac50d93a9abef2b, type: 3}
