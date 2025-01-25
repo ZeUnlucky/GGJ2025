@@ -13,12 +13,18 @@ public class GameOverManager : MonoBehaviour
     public void FinishGame(int score, bool didWin)
     {
         GameOverPanel.SetActive(true);
-        _gameOverText.text = $"Mom is home! You got {score} things hidden!";
+        
         _isGameWon= didWin;
         if (_isGameWon)
+        {
+            _gameOverText.text = $"Everything looks fine!";
             _gameOverChangingButtonText.text = "Next Level";
+        }
         else
+        {
+            _gameOverText.text = $"Busted!";
             _gameOverChangingButtonText.text = "Retry Level";
+        }
     }
 
     public void ChangingButtonHandler()
