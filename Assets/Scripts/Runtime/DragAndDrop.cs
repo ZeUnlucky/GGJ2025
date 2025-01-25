@@ -25,12 +25,15 @@ namespace Runtime
         void Start()
         {
             _mainCamera = Camera.main;
+            Cursor.lockState = CursorLockMode.Confined;
             _uiManager.OnMenuEnabled += SetGameStatus;
         }
 
         void OnMouseDown()
         {
             _offset = transform.position - GetMouseWorldPosition();
+            if (!_isDragging)
+                _uiManager.am.PlaySound(SoundIndexes.Click);
             _isDragging = true;
         }
 
@@ -70,6 +73,7 @@ namespace Runtime
 
                 Destroy(hit.gameObject);
                 Destroy(gameObject);
+                _uiManager.ItemsCombined();
                 // Exit after first successful combination
                 break;
             }

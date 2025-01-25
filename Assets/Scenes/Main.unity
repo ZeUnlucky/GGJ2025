@@ -1956,6 +1956,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SecondMenu: {fileID: 1212688225}
+  am: {fileID: 0}
+  sliders:
+  - {fileID: 1808065503}
+  - {fileID: 760071695}
+  - {fileID: 84958476}
 --- !u!114 &896920475
 MonoBehaviour:
   m_ObjectHideFlags: 0
