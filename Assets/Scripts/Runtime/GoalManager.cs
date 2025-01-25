@@ -25,8 +25,9 @@ namespace Runtime
             {
                 _goalItems.Remove(item);
                 Score++;
-                Destroy(instance);
-
+                //Destroy(instance);
+                string originalText = instance.GetComponent<TextMeshProUGUI>().text;
+                instance.GetComponent<TextMeshProUGUI>().text = $"<s>{originalText}</s>";
                 if (_goalItems.Count == 0)
                 {
                     onCompleted?.Invoke();

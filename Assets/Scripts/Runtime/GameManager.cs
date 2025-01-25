@@ -33,21 +33,31 @@ namespace Runtime
             uiManager.OnMenuEnabled += SetMenuStatus;
             gameStartHandler.StartGameEvent += StartGame;
 
-            _timer.OnTimerEnded += GameOver;
-            _goalManager.onCompleted += GameOver;
+            _timer.OnTimerEnded += GameOverLost;
+            _goalManager.onCompleted += GameOverWon;
         }
 
         public void StartGame()
         {
             timerView.timer.StartGame();
         }
-        private void GameOver()
+
+        private void GameOverLost()
+        {
+            GameOver(false);
+        }
+
+        private void GameOverWon()
+        {
+            GameOver(true);
+        }
+        private void GameOver(bool didWin)
         {
             if (_isGameOver) return;
             _isGameOver = true;
             timerView.ShouldUpdateTimer = false;
             //Game over
-            gameOverManager.FinishGame(_goalManager.Score);
+            gameOverManager.FinishGame(_goalManager.Score, didWin);
             Time.timeScale = 0;
         }
 
