@@ -11,11 +11,11 @@ public class SettingsHandler : MonoBehaviour
     public event Action<float> OnSFXVolumeChange;
     public event Action<float> OnMusicVolumeChange;
 
-    private void Start()
+    private void Awake()
     {
-        masterVolume = PlayerPrefs.GetFloat("masterVolume", 1.0f);
-        sfxVolume = PlayerPrefs.GetFloat("sfxVolume", 1.0f);
-        musicVolume = PlayerPrefs.GetFloat("musicVolume", 1.0f);
+        masterVolume = PlayerPrefs.GetFloat("masterVolume", 0.5f);
+        sfxVolume = PlayerPrefs.GetFloat("sfxVolume", 0.5f);
+        musicVolume = PlayerPrefs.GetFloat("musicVolume", 0.5f);
     }
 
     public void SetMasterVolume(float volume)
