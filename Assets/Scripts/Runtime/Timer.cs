@@ -29,12 +29,14 @@ public class Timer : MonoBehaviour
         {
             _isRunning = false;
             OnTimerEnded.Invoke();
+            timerEnded.Invoke();
         }
     }
 
     public void StartGame()
     {
         gameSeconds = gameSettings.GameSeconds;
+        timerStarted.Invoke();
         _isRunning = true;
     }
 }
