@@ -76,7 +76,7 @@ Material:
     - _Reflectivity: 10
     - _ScaleRatioA: 0.90909094
     - _ScaleRatioB: 0.79545456
-    - _ScaleRatioC: 0.6363636
+    - _ScaleRatioC: 0.48209363
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -92,7 +92,7 @@ Material:
     - _UnderlayDilate: 0.4
     - _UnderlayOffsetX: 0.85
     - _UnderlayOffsetY: -0.5
-    - _UnderlaySoftness: 0
+    - _UnderlaySoftness: 0.4
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
     - _WeightBold: 0.5
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Bangers SDF
+  m_Name: BangersDUP
   m_EditorClassIdentifier: 
   m_Version: 1.1.0
   m_FaceInfo:
