@@ -10,10 +10,12 @@ namespace Runtime
         [SerializeField] private CraftingSystem _craftingSystem;
         [SerializeField] private GoalItem _goalItem;
         [SerializeField] private GameSettings _particleSystemSetting;
+        [SerializeField] private UIManager _uiManager;
 
         private Vector3 _offset;
         private Camera _mainCamera;
         private bool _isDragging = false;
+        private bool _gameActive = false;
 
         private void Awake()
         {
@@ -23,6 +25,7 @@ namespace Runtime
         void Start()
         {
             _mainCamera = Camera.main;
+            _uiManager.OnMenuEnabled += SetGameStatus;
         }
 
         void OnMouseDown()
@@ -33,7 +36,7 @@ namespace Runtime
 
         void OnMouseDrag()
         {
-            if (_isDragging)
+            if (_isDragging && _gameActive)
             {
                 // Update the sprite's position to follow the mouse
                 transform.position = GetMouseWorldPosition() + _offset;
@@ -78,5 +81,11 @@ namespace Runtime
             mouseScreenPosition.z = _mainCamera.WorldToScreenPoint(transform.position).z;
             return _mainCamera.ScreenToWorldPoint(mouseScreenPosition);
         }
+
+        public void SetGameStatus(bool status)
+        {
+            _gameActive = !status;
+        }
+
     }
 }

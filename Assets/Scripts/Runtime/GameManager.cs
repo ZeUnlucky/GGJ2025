@@ -11,6 +11,7 @@ namespace Runtime
         [SerializeField] UIManager uiManager;
         [SerializeField] TimerView timerView;
         [SerializeField] GameOverManager gameOverManager;
+        [SerializeField] GameStartHandler gameStartHandler;
 
         [SerializeField] private GoalManager _goalManager;
 
@@ -30,11 +31,16 @@ namespace Runtime
             settings.OnSFXVolumeChange += UpdateSFX;
             settings.OnMusicVolumeChange += UpdateMusic;
             uiManager.OnMenuEnabled += SetMenuStatus;
+            gameStartHandler.StartGameEvent += StartGame;
 
             _timer.OnTimerEnded += GameOver;
             _goalManager.onCompleted += GameOver;
         }
 
+        public void StartGame()
+        {
+            timerView.timer.StartGame();
+        }
         private void GameOver()
         {
             if (_isGameOver) return;

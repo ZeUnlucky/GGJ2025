@@ -5,6 +5,8 @@ using UnityEngine.Events;
 public class Timer : MonoBehaviour
 {
     [SerializeField] GameSettings gameSettings;
+    [SerializeField] public UnityEvent timerStarted;
+    [SerializeField] public UnityEvent timerEnded;
     private float gameSeconds;
     private bool _isRunning;
 
@@ -15,8 +17,7 @@ public class Timer : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        gameSeconds = gameSettings.GameSeconds;
-        _isRunning = true;
+        _isRunning = false;
     }
 
     // Update is called once per frame
@@ -29,5 +30,11 @@ public class Timer : MonoBehaviour
             _isRunning = false;
             OnTimerEnded.Invoke();
         }
+    }
+
+    public void StartGame()
+    {
+        gameSeconds = gameSettings.GameSeconds;
+        _isRunning = true;
     }
 }
