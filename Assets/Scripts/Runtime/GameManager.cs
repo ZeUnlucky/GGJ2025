@@ -9,6 +9,8 @@ namespace Runtime
         [SerializeField] SettingsHandler settings;
         [SerializeField] AudioMixer audioMixer;
         [SerializeField] UIManager uiManager;
+        [SerializeField] TimerView timerView;
+        [SerializeField] GameOverManager gameOverManager;
 
         [SerializeField] private GoalManager _goalManager;
 
@@ -36,10 +38,11 @@ namespace Runtime
         private void GameOver()
         {
             if (_isGameOver) return;
+            _isGameOver = true;
+            timerView.ShouldUpdateTimer = false;
             //Game over
-            var score = _goalManager.Score;
-            _announcementTextField.text = $"Your Mom is home! You managed to hide {score} items.";
-            //TODO: Stop the game and restart
+            gameOverManager.FinishGame(_goalManager.Score);
+            Time.timeScale = 0;
         }
 
         private void UpdateMaster(float volume)

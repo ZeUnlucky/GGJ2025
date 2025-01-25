@@ -25,7 +25,6 @@ namespace Runtime
             {
                 _goalItems.Remove(item);
                 Score++;
-                //instance.text = $"<s>{instance.text}</s>";
                 Destroy(instance);
 
                 if (_goalItems.Count == 0)
