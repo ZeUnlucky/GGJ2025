@@ -28,6 +28,7 @@ TagManager:
   - FxTemporaire
   - Picture
   - Picture Placement
+  - Curtain Shadow
   layers:
   - Default
   - TransparentFX
