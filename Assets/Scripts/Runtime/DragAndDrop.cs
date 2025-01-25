@@ -25,6 +25,7 @@ namespace Runtime
         void Start()
         {
             _mainCamera = Camera.main;
+            Cursor.lockState = CursorLockMode.Confined;
             _uiManager.OnMenuEnabled += SetGameStatus;
         }
 
