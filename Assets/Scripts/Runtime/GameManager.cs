@@ -12,6 +12,7 @@ namespace Runtime
         [SerializeField] TimerView timerView;
         [SerializeField] GameOverManager gameOverManager;
         [SerializeField] GameStartHandler gameStartHandler;
+        [SerializeField] AudioManager audioManager;
 
         [SerializeField] private GoalManager _goalManager;
 
@@ -40,16 +41,19 @@ namespace Runtime
         public void StartGame()
         {
             timerView.timer.StartGame();
+            audioManager.PlaySound(SoundIndexes.BackgroundMusic);
         }
 
         private void GameOverLost()
         {
             GameOver(false);
+            audioManager.PlaySound(SoundIndexes.LoseSound);
         }
 
         private void GameOverWon()
         {
             GameOver(true);
+            audioManager.PlaySound(SoundIndexes.WinSound);
         }
         private void GameOver(bool didWin)
         {
@@ -59,6 +63,7 @@ namespace Runtime
             //Game over
             gameOverManager.FinishGame(_goalManager.Score, didWin);
             Time.timeScale = 0;
+            audioManager.StopSound(SoundIndexes.BackgroundMusic);
         }
 
         private void UpdateMaster(float volume)
